@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial;
+    text-align: center;
+}
+
+body {
+    font-family: 'Skranji', cursive;
+}
+
+/* * * HOMEPAGE * * */
+
+h1 {
+    margin-top: 2rem;
+}
+
+#cast-btn {
+    margin: 2rem 0;
+}
+
+hr {
+   border: 2px solid black;
+}
+
+.rune-slot {
+    /*border: 2px solid black;*/
+    display: inline-block;
+    height: 21em;
+    padding: 1rem;
+}
+
+.rune-name {
+    font-size: 25px;
+}
+
+.rune-slot img {
+    height: 15rem;
+}
+
+/* * * RESPONSIVE DESIGN * * */
+
+@media screen and (max-width: 768px) {
+    .rune-name {
+        font-size: 20px;
+    }
+    .rune-slot img {
+        height: 12rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .rune-name {
+        font-size: 16px;
+    }
+    .rune-slot img {
+        height:10rem;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .rune-name {
+        font-size: 12px;
+    }
+    .rune-slot img {
+        height:6rem;
+    }
+}
