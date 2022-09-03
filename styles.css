@@ -52,11 +52,21 @@ hr {
 }
 
 @media screen and (max-width: 576px) {
+    h1 {
+        margin-top: 0.5rem;
+    }
+    
+    #cast-btn {
+        margin: 0.5rem 0;
+    }
     .rune-name {
         font-size: 16px;
     }
     .rune-slot img {
         height:10rem;
+    }
+    .rune-description {
+        font-size: 10px;
     }
 }
 
