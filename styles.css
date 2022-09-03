@@ -23,13 +23,13 @@ h1 {
 
 hr {
    border: 2px solid black;
+   margin: 10px 0;
 }
 
 .rune-slot {
-    /*border: 2px solid black;*/
     display: inline-block;
     height: 21em;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
 .rune-name {
@@ -71,10 +71,16 @@ hr {
 }
 
 @media screen and (max-width: 370px) {
+    .rune-slot {
+        height: 10rem;
+        margin-top: 1.25rem;
+    }
+    
     .rune-name {
-        font-size: 12px;
+        font-size: 20px;
     }
     .rune-slot img {
-        height:6rem;
+        height: 6rem;
+        display: inline-block;
     }
 }

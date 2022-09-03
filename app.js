@@ -145,7 +145,7 @@ function identifyRune(rune) {
         break;
 
         case 22:
-            return [`Ingwaz`, `Symbol: Ingwaz/Freyr (God of Fertility, Kingship, Peace, Prosperity). Significance: Fertility, Beginnings, Actualization of Potential.`];
+            return [`Ingwaz`, `Symbol: Ingwaz/Freyr (God of Fertility, Peace, Prosperity). Significance: Fertility, Beginnings, Actualization of Potential.`];
         break;
 
         case 23:
