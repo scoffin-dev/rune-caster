@@ -1,0 +1,22 @@
+{
+  "name": "rune-caster",
+  "version": "1.0.0",
+  "description": "Cast the runes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scoffin-dev/rune-caster.git"
+  },
+  "author": "scoffin-dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scoffin-dev/rune-caster/issues"
+  },
+  "homepage": "https://github.com/scoffin-dev/rune-caster#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
