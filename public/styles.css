@@ -8,17 +8,34 @@ html {
 }
 
 body {
+    background-image: url('images/decorative/wooden-background-3.jpg');
+    color: white;
     font-family: 'Skranji', cursive;
 }
 
 /* * * HOMEPAGE * * */
 
+#banner {
+    background-color: #050705;
+    padding: 1rem 0;
+}
+
+.candle-img {
+    max-height: 3rem;
+}
+
 h1 {
-    margin-top: 2rem;
+    color: #FA7D1F;
+    display: inline-block;
+    /*margin-top: 2rem;*/
+}
+
+#banner p {
+    color: #F3EABC;
 }
 
 #cast-btn {
-    margin: 2rem 0;
+    margin: 0.5rem 0;
 }
 
 hr {
@@ -26,10 +43,22 @@ hr {
    margin: 10px 0;
 }
 
+#rune-row {
+    padding-top: 1.5rem;
+}
+
 .rune-slot {
     display: inline-block;
     height: 21em;
     width: 21em;
+}
+
+#rune-name-2 {
+    margin-top: 5rem;
+}
+
+#rune-name-3 {
+    margin-top: 10rem;
 }
 
 .rune-name {
@@ -43,6 +72,16 @@ hr {
 /* * * RESPONSIVE DESIGN * * */
 
 @media screen and (min-width: 768px) {
+    #rune-row {
+        background-color: #050705;
+        min-height: 25rem;;
+    }
+    #rune-name-2 {
+        margin-top:0rem;
+    }
+    #rune-name-3 {
+        margin-top: 0rem;
+    }
     .rune-name {
         font-size: 20px;
     }
@@ -60,15 +99,16 @@ hr {
     }
     .rune-slot {
         height: 17.5rem;
+        width: 100%;
     }
     .rune-name {
-        font-size: 18px;
+        font-size: 20px;
     }
     .rune-slot img {
-        height:10rem;
+        height:15rem;
     }
     .rune-description {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
