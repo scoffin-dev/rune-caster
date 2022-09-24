@@ -7,9 +7,13 @@ let rune1NamePlace = document.querySelector(`#rune-slot-1 p`);
 let rune2NamePlace = document.querySelector(`#rune-slot-2 p`);
 let rune3NamePlace = document.querySelector(`#rune-slot-3 p`);
 
-let rune1DescriptionElement = document.querySelector(`#rune-1-description`);
-let rune2DescriptionElement = document.querySelector(`#rune-2-description`);
-let rune3DescriptionElement = document.querySelector(`#rune-3-description`);
+let rune1SymbolElement = document.querySelector(`#rune-1-symbol`);
+let rune2SymbolElement = document.querySelector(`#rune-2-symbol`);
+let rune3SymbolElement = document.querySelector(`#rune-3-symbol`);
+
+let rune1SignificanceElement = document.querySelector(`#rune-1-significance`);
+let rune2SignificanceElement = document.querySelector(`#rune-2-significance`);
+let rune3SignificanceElement = document.querySelector(`#rune-3-significance`);
 
 let rune1Info = [];
 let rune2Info = [];
@@ -36,17 +40,17 @@ castBtn.addEventListener('click', () => {
     rune1Assigned = true;
     displayRuneImg(rune1, rune1Img);
     displayRuneName(rune1, rune1NamePlace);
-    displayRuneDescription(rune1, rune1DescriptionElement);
+    displayRuneDescription(rune1, rune1SymbolElement, rune1SignificanceElement);
 
     let rune2 = assignRune(2);
     displayRuneImg(rune2, rune2Img);
     displayRuneName(rune2, rune2NamePlace);
-    displayRuneDescription(rune2, rune2DescriptionElement);
+    displayRuneDescription(rune2, rune2SymbolElement, rune2SignificanceElement);
 
     let rune3 = assignRune(3);
     displayRuneImg(rune3, rune3Img);
     displayRuneName(rune3, rune3NamePlace);
-    displayRuneDescription(rune3, rune3DescriptionElement);
+    displayRuneDescription(rune3, rune3SymbolElement, rune3SignificanceElement);
 
     /*
     let runePool = [
@@ -196,8 +200,8 @@ function displayRuneName(runeNum, runeNameElement) {
     runeNameElement.textContent = runeName;
 }
 
-function displayRuneDescription(runeNum, runeDescriptionElement) {
+function displayRuneDescription(runeNum, runeSymbolElement, runeSignificanceElement) {
     let runeObj = identifyRune(runeNum);
-    let runeDescription = runeObj.symbol;
-    runeDescriptionElement.textContent = runeDescription;
+    runeSymbolElement.textContent = runeObj.symbol;
+    runeSignificanceElement.textContent = runeObj.significance;
 }
