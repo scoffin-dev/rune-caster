@@ -17,10 +17,16 @@ let rune3Info = [];
 
 let castBtn = document.querySelector('#cast-btn');
 
+/*
 let runePool = [
     1, 2, 3, 4, 5, 6, 7, 8,
     9, 10, 11, 12, 13, 14, 15, 16,
     17, 18, 19, 20, 21, 22, 23, 24
+];
+*/
+
+let runePool = [
+    1, 2, 3, 4, 5
 ];
 
 // When the cast button is clicked...
@@ -42,12 +48,24 @@ castBtn.addEventListener('click', () => {
     displayRuneName(rune3, rune3NamePlace);
     displayRuneDescription(rune3, rune3DescriptionElement);
 
-    runePool = [
+    /*
+    let runePool = [
         1, 2, 3, 4, 5, 6, 7, 8,
         9, 10, 11, 12, 13, 14, 15, 16,
         17, 18, 19, 20, 21, 22, 23, 24
-    ];    
+    ];
+    */
+
+    runePool = [
+        1, 2, 3, 4, 5
+    ];  
 });
+
+function Rune(name, symbol, significance) {
+    this.name = name;
+    this.symbol = symbol;
+    this.significance = significance;
+}
 
 function assignRune(runeNum) {
     // Assign rune to the value at a random index in runePool
@@ -61,25 +79,31 @@ function assignRune(runeNum) {
 function identifyRune(rune) {
     switch (rune) {
         case 1: 
-            return [`Fehu`, `Symbol: Cattle. Significance: Wealth.`];
+            let fehu = new Rune(`Fehu`, `Cattle`,  `Wealth`);
+            return fehu;
         break;
         
         case 2:
-            return [`Uruz`, `Symbol: Aurochs. Significance: Strength of Will.`];
+            let uruz = new Rune(`Uruz`, `Aurochs`,`Strength of Will`);
+            return uruz;
         break;
 
         case 3:
-            return [`Thurisaz`, `Symbol: Giant. Significance: Danger, Suffering.`];
+            let thurisaz = new Rune(`Thurisaz`, `Giant`, `Danger, Suffering`);
+            return thurisaz;
         break;
 
         case 4:
-            return [`Ansuz`, `Symbol: Aesir. Significance: Prosperity, Vitality`];
+            let ansuz = new Rune(`Ansuz`, `Aesir`, `Prosperity, Vitality`);
+            return ansuz;
         break;
 
         case 5:
-            return [`Raidho`, `Symbol: Journey. Significance: Movement, Work, Growth.`];
+            let raidho = new Rune(`Raidho`, `Journey`, `Movement, Work, Growth`);
+            return raidho;
         break;
 
+        /*
         case 6:
             return [`Kaunan`, `Symbol: Ulcer. Significance: Mortality, Pain.`];
         break;
@@ -155,6 +179,7 @@ function identifyRune(rune) {
         case 24:
             return [`Dagaz`, `Symbol: Day. Significance: Hope, Happiness.`];
         break;
+        */
         
         default:
             return `Wyrd... 404: Rune not found`
@@ -166,11 +191,13 @@ function displayRuneImg(runeNum, runeImgElement, ) {
 }
 
 function displayRuneName(runeNum, runeNameElement) {
-    let runeName = identifyRune(runeNum)[0];
+    let runeObj = identifyRune(runeNum);
+    let runeName = runeObj.name;
     runeNameElement.textContent = runeName;
 }
 
 function displayRuneDescription(runeNum, runeDescriptionElement) {
-    let runeDescription = identifyRune(runeNum)[1];
+    let runeObj = identifyRune(runeNum);
+    let runeDescription = runeObj.symbol;
     runeDescriptionElement.textContent = runeDescription;
 }
