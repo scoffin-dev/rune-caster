@@ -21,16 +21,10 @@ let rune3Info = [];
 
 let castBtn = document.querySelector('#cast-btn');
 
-/*
 let runePool = [
     1, 2, 3, 4, 5, 6, 7, 8,
     9, 10, 11, 12, 13, 14, 15, 16,
     17, 18, 19, 20, 21, 22, 23, 24
-];
-*/
-
-let runePool = [
-    1, 2, 3, 4, 5
 ];
 
 // When the cast button is clicked...
@@ -53,17 +47,11 @@ castBtn.addEventListener('click', () => {
     displayRuneName(rune3, rune3NamePlace);
     displayRuneDescription(rune3, rune3SymbolElement, rune3SignificanceElement);
 
-    /*
-    let runePool = [
+    runePool = [
         1, 2, 3, 4, 5, 6, 7, 8,
         9, 10, 11, 12, 13, 14, 15, 16,
         17, 18, 19, 20, 21, 22, 23, 24
     ];
-    */
-
-    runePool = [
-        1, 2, 3, 4, 5
-    ];  
 });
 
 function Rune(name, symbol, significance) {
@@ -84,108 +72,101 @@ function assignRune(runeNum) {
 function identifyRune(rune) {
     switch (rune) {
         case 1: 
-            let fehu = new Rune(`Fehu`, `Symbol: Cattle`,  `Significance: Wealth`);
-            return fehu;
+            return new Rune(`Fehu`, `Symbol: Cattle`,  `Significance: Wealth`);
         break;
         
         case 2:
-            let uruz = new Rune(`Uruz`, `Symbol: Aurochs`,`Significance: Strength of Will`);
-            return uruz;
+            return new Rune(`Uruz`, `Symbol: Aurochs`,`Significance: Strength of Will`);
         break;
 
         case 3:
-            let thurisaz = new Rune(`Thurisaz`, `Symbol: Giant`, `Significance: Danger, Suffering`);
-            return thurisaz;
+            return new Rune(`Thurisaz`, `Symbol: Giant`, `Significance: Danger, Suffering`);
         break;
 
         case 4:
-            let ansuz = new Rune(`Ansuz`, `Symbol: Aesir`, `Significance: Prosperity, Vitality`);
-            return ansuz;
+            return new Rune(`Ansuz`, `Symbol: Aesir`, `Significance: Prosperity, Vitality`);
         break;
 
         case 5:
-            let raidho = new Rune(`Raidho`, `Symbol: Journey`, `Significance: Movement, Work, Growth`);
-            return raidho;
+            return new Rune(`Raidho`, `Symbol: Journey`, `Significance: Movement, Work, Growth`);
         break;
 
-        /*
         case 6:
-            return [`Kaunan`, `Symbol: Ulcer. Significance: Mortality, Pain.`];
+            return new Rune(`Kaunan`, `Symbol: Ulcer`, ` Significance: Mortality, Pain`);
         break;
 
         case 7:
-            return [`Gebo`, `Symbol: Gift. Significance: Generosity.`];
+            return new Rune(`Gebo`, `Symbol: Gift`, `Significance: Generosity`);
         break;
 
         case 8:
-            return [`Wunjo`, `Symbol: Joy. Significance: Bliss, Excitement.`];
+            return new Rune(`Wunjo`, `Symbol: Joy`, `Significance: Bliss, Excitement`);
         break;
 
         case 9:
-            return [`Hagalaz`, `Symbol: Hail. Significance: Destruction, Chaos.`];
+            return new Rune(`Hagalaz`, `Symbol: Hail`, `Significance: Destruction, Chaos`);
         break;
 
         case 10:
-            return [`Naudhiz`, `Symbol: Need. Significance: Lack, Unfulfilled Desire.`];
+            return new Rune(`Naudhiz`, `Symbol: Need`, `Significance: Lack, Unfulfilled Desire`);
         break;
 
         case 11:
-            return [`Isaz`, `Symbol: Ice. Significance: Unknown. Speculation: Challenge, Frustration`];
+            return new Rune(`Isaz`, `Symbol: Ice`, `Significance: Unknown. Speculation: Challenge, Frustration`);
         break;
 
         case 12:
-            return [`Jera`, `Symbol: Year. Significance: Harvest, Reward.`];
+            return new Rune(`Jera`, `Symbol: Year`, `Significance: Harvest, Reward`);
         break;
 
         case 13:
-            return [`Eihwaz`, `Symbol: Yew. Significance: Strength, Stability.`];
+            return new Rune(`Eihwaz`, `Symbol: Yew`, `Significance: Strength, Stability`);
         break;
 
         case 14:
-            return [`Pertho`, `Symbol: Secret. Significance: Unkown. Speculation: Uncertainty, Hidden Things`];
+            return new Rune(`Pertho`, `Symbol: Secret`, `Significance: Uncertainty, Hidden Things`);
         break;
 
         case 15:
-            return [`Algiz`, `Symbol: Elk. Significance: Protection.`];
+            return new Rune(`Algiz`, `Symbol: Elk`, `Significance: Protection`);
         break;
 
         case 16:
-            return [`Sowilo`, `Symbol: Sun. Significance: Success, Solace.`];
+            return new Rune(`Sowilo`, `Symbol: Sun`, `Significance: Success, Solace`);
         break;
 
         case 17:
-            return [`Tiwaz`, `Symbol: Tiwaz (God of War). Significance: Victory, Honor.`];
+            return new Rune(`Tiwaz`, `Symbol: Tiwaz (God of War)`, `Significance: Victory, Honor`);
         break;
 
         case 18:
-            return [`Berkanan`, `Symbol: Birch. Significance: Fertility, Growth, Sustenance.`];
+            return new Rune(`Berkanan`, `Symbol: Birch`, `Significance: Growth, Sustenance`);
         break;
 
         case 19:
-            return [`Ehwaz`, `Symbol: Horse. Significance: Trust, Faith, Companionship.`];
+            return new Rune(`Ehwaz`, `Symbol: Horse`, `Significance: Trust, Faith, Companionship`);
         break;
 
         case 20:
-            return [`Mannaz`, `Symbol: Man. Significance: Increase, Support.`];
+           return new Rune(`Mannaz`, `Symbol: Man`, `Significance: Increase, Support`);
         break;
 
         case 21:
-            return [`Laguz`, `Symbol: Formlessness. Significance: Chaos, Potentiality, The Unknown.`];
+            return new Rune(`Laguz`, `Symbol: Formlessness`, `Significance: Chaos, Potentiality, The Unknown`);
         break;
 
         case 22:
-            return [`Ingwaz`, `Symbol: Ingwaz/Freyr (God of Fertility, Peace, Prosperity). Significance: Fertility, Beginnings, Actualization of Potential.`];
+            return new Rune(`Ingwaz`, `Symbol: Ingwaz/Freyr (God of Peace, Prosperity)`, `Significance: Beginnings, Actualization of Potential`);
         break;
 
         case 23:
-            return [`Othalan`, `Symbol: Inheritance. Significance: Heritage, Tradition, Nobility.`];
+            return new Rune(`Othalan`, `Symbol: Inheritance`, `Significance: Heritage, Tradition, Nobility`);
         break;
 
         case 24:
-            return [`Dagaz`, `Symbol: Day. Significance: Hope, Happiness.`];
+            return new Rune(`Dagaz`, `Symbol: Day`, `Significance: Hope, Happiness`);
         break;
-        */
-        
+
         default:
             return `Wyrd... 404: Rune not found`
     }
