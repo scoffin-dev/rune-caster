@@ -112,7 +112,7 @@ function identifyRune(rune) {
         break;
 
         case 11:
-            return new Rune(`Isaz`, `Symbol: Ice`, `Significance: Unknown. Speculation: Challenge, Frustration`);
+            return new Rune(`Isaz`, `Symbol: Ice`, `Significance: Challenge, Frustration`);
         break;
 
         case 12:
