@@ -36,6 +36,7 @@ let runePool = [
 // When the cast button is clicked...
 castBtn.addEventListener('click', () => {
 
+
     let rune1 = assignRune(1);
     rune1Assigned = true;
     displayRuneImg(rune1, rune1Img);
@@ -83,27 +84,27 @@ function assignRune(runeNum) {
 function identifyRune(rune) {
     switch (rune) {
         case 1: 
-            let fehu = new Rune(`Fehu`, `Cattle`,  `Wealth`);
+            let fehu = new Rune(`Fehu`, `Symbol: Cattle`,  `Significance: Wealth`);
             return fehu;
         break;
         
         case 2:
-            let uruz = new Rune(`Uruz`, `Aurochs`,`Strength of Will`);
+            let uruz = new Rune(`Uruz`, `Symbol: Aurochs`,`Significance: Strength of Will`);
             return uruz;
         break;
 
         case 3:
-            let thurisaz = new Rune(`Thurisaz`, `Giant`, `Danger, Suffering`);
+            let thurisaz = new Rune(`Thurisaz`, `Symbol: Giant`, `Significance: Danger, Suffering`);
             return thurisaz;
         break;
 
         case 4:
-            let ansuz = new Rune(`Ansuz`, `Aesir`, `Prosperity, Vitality`);
+            let ansuz = new Rune(`Ansuz`, `Symbol: Aesir`, `Significance: Prosperity, Vitality`);
             return ansuz;
         break;
 
         case 5:
-            let raidho = new Rune(`Raidho`, `Journey`, `Movement, Work, Growth`);
+            let raidho = new Rune(`Raidho`, `Symbol: Journey`, `Significance: Movement, Work, Growth`);
             return raidho;
         break;
 
